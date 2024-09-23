@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNowLogy</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@200&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400&display=swap">
+    <style>
+        :root {
+            --main-bg-color: rgba(60, 60, 60, 0.4);
+            --hover-bg-color: rgba(255, 255, 255, 0.3);
+            --title-shadow-color: rgba(0, 0, 0, 0.6);
+            --text-color: white;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-image: url('images/background.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+        }
+        header {
+            background-color: var(--main-bg-color);
+            padding: 15px;
+            text-align: center;
+        }
+        header h1 {
+            font-family: 'Cinzel', serif;
+            text-align: center;
+            margin: 3% 0 2%;
+            text-shadow: 2px 2px 4px var(--title-shadow-color);
+            font-weight: 400;
+            font-size: 3em;
+            padding: 2px;
+            letter-spacing: 4px;
+        }
+        header h2 {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            font-weight: 200;
+            color: var(--text-color);
+        }
+        main {
+            padding: 20px;
+        }
+        .tab-panel {
+            background-color: rgba(255, 255, 255, 0.2);
+            margin: 0 auto 20px;
+            padding: 20px;
+            border-radius: 8px;
+            color: var(--text-color);
+            text-align: center;
+            width: 60%;
+        }
+        .tab-panel h3 {
+            margin-top: 0;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 200;
+        }
+        .preview-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: var(--main-bg-color);
+            border-radius: 8px;
+            color: var(--text-color);
+            text-decoration: none;
+            text-align: center;
+            width: 80%;
+        }
+        .preview-link img {
+            max-width: 100px;
+            margin-right: 15px;
+            border-radius: 5px;
+        }
+        .preview-link:hover {
+            background-color: var(--hover-bg-color);
+        }
+        footer {
+            background-color: var(--main-bg-color);
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            right: 0;
+            text-align: right;
+            color: var(--text-color);
+        }
+        hr {
+            width: 60%;
+            margin: 20px auto;
+            border: 0;
+            height: 1px;
+            background: var(--text-color);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TECH-NOW-LOGY</h1>
+        <h2>Your Latest Updates on Technology</h2>
+    </header>
+    <main>
+        <div class="tab-panel">
+            <h3>Dell Partners with Qualcomm & Microsoft</h3>
+            <a class="preview-link" href="https://telecom.economictimes.indiatimes.com/news/devices/dell-partners-with-qualcomm-microsoft-to-launch-copilot-ai-pc-range-in-india/111797136" target="_blank">
+                <img src="https://img.etimg.com/thumb/msid-111797136,width-600,height-400,imgsize-0,dell-partners-with-qualcomm-microsoft-to-launch-copilot-ai-pc-range-in-india.jpg" alt="Dell Partners with Qualcomm & Microsoft">
+                Preview: Dell Partners with Qualcomm & Microsoft to Launch Copilot AI PC Range in India
+            </a>
+        </div>
+        <hr>
+        <div class="tab-panel">
+            <h3>Apple Releases iOS 18 Public Beta</h3>
+            <a class="preview-link" href="https://www.business-standard.com/technology/tech-news/apple-releases-ios-18-public-beta-what-is-new-eligible-iphones-and-more-124071600489_1.html" target="_blank">
+                <img src="https://bsmedia.business-standard.com/_media/bs/img/article/2024-07/16/full/1721114556-4717.jpg" alt="Apple Releases iOS 18 Public Beta">
+                Preview: Apple Releases iOS 18 Public Beta - What's New, Eligible iPhones, and More
+            </a>
+        </div>
+        <hr>
+        <div class="tab-panel">
+            <h3>How is Artificial Intelligence Revolutionizing the IT Industry</h3>
+            <a class="preview-link" href="https://content.techgig.com/technology/how-is-artificial-intelligence-revolutionizing-the-it-industry-insights-from-it-leaders/articleshow/111755322.cms" target="_blank">
+                <img src="https://contentstatic.techgig.com/thumb/msid-111755322,width-800,resizemode-4/How-is-artificial-intelligence-revolutionizing-the-IT-Industry-Insights-from-IT-leaders.jpg" alt="How is Artificial Intelligence Revolutionizing the IT Industry">
+                Preview: How is Artificial Intelligence Revolutionizing the IT Industry - Insights from IT Leaders
+            </a>
+        </div>
+        <hr>
+        <div class="tab-panel">
+            <h3>How Remote Work Technologies are Shaping the Future of Employment</h3>
+            <a class="preview-link" href="https://content.techgig.com/career-advice/how-remote-work-technologies-are-shaping-the-future-of-employment/articleshow/111719410.cms" target="_blank">
+                <img src="https://contentstatic.techgig.com/thumb/msid-111719410,width-800,resizemode-4/How-remote-work-technologies-are-shaping-the-future-of-employment.jpg" alt="How Remote Work Technologies are Shaping the Future of Employment">
+                Preview: How Remote Work Technologies are Shaping the Future of Employment
+            </a>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright &copy; 2024 Just a Bit.</p>
+    </footer>
+</body>
+</html>

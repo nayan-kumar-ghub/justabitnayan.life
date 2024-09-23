@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@300;400&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+        --main-bg-color: rgba(60, 60, 60, 0.4);
+        --text-color: white;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('/images/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: var(--text-color);
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 15px;
+    }
+    .bg-light {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 3rem 0;
+      text-align: center;
+    }
+    .title {
+      font-family: 'Cinzel', serif;
+      text-align: center;
+      margin: 3% 0 2%;
+      text-shadow: 2px 2px 4px var(--title-shadow-color);
+      font-weight: 300;
+      font-size: 4em;
+      padding: 2px;
+      letter-spacing: 4px;
+    }
+    .lead {
+      font-size: 1rem;
+      font-weight: 300;
+      text-align: center;
+      margin: 0 0 2%;
+    }
+    .icon-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem; /* Adjusted spacing */
+      text-align: center;
+    }
+    .icon-text img {
+      width: 40px; /* Adjusted size */
+      height: 40px; /* Adjusted size */
+      margin-bottom: 0.5rem; /* Adjusted spacing */
+    }
+    .icon-text div {
+      text-align: center;
+    }
+    .link-secondary {
+      color: var(--text-color);
+      font-style: italic;
+      text-decoration: none;
+    }
+    .bg-white {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: var(--text-color);
+      margin: 0 auto;
+      padding: 1.5rem;
+      border-radius: .25rem;
+      box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
+    }
+    .form-label, .form-control, .input-group-text {
+      display: block;
+      margin: .5rem auto;
+      width: 94%;
+    }
+    .form-control {
+      padding: .375rem .75rem;
+      font-size: 1rem;
+      font-weight: 300;
+      border: 1px solid #ced4da;
+      border-radius: .25rem;
+      transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
+    .input-group {
+      display: flex;
+      width: 100%;
+      align-items: center;
+    }
+    .btn {
+      display: inline-block;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #fff;
+      background-color: #007bff;
+      border: 1px solid #007bff;
+      padding: .5rem 1rem;
+      font-size: 1.25rem;
+      border-radius: .3rem;
+      cursor: pointer;
+      text-align: center;
+      transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+      margin: 1rem auto;
+    }
+    .form-container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 15px;
+      text-align: center;
+    }
+    .separator {
+      width: 50%;
+      margin: 1rem auto;
+      border-bottom: 1px solid var(--text-color);
+    }
+    @media (max-width: 600px) {
+      .form-container {
+        max-width: 60%;
+      }
+      .separator {
+        width: 80%;
+      }
+    }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .col-lg-6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+    .content-left {
+      order: 1;
+      padding: 20px;
+      text-align: center;
+    }
+    .content-right {
+      order: 2;
+    }
+    footer {
+        background-color: var(--main-bg-color);
+        padding: 10px;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        right: 0;
+        text-align: right;
+        color: var(--text-color);
+    }
+  </style>
+</head>
+<body>
+  <h2 class="title">GET IN TOUCH</h2>
+  <p class="lead">
+    I am always eager to explore and work with the latest advancements in technology.<br>
+    If you are interested in collaborating or have any innovative ideas to share,<br>
+    please feel free to reach out through any of the following methods.
+  </p>
+  <section class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 content-left">
+          <div class="icon-text">
+            <img src="/images/address.png" alt="Address Icon">
+            <div>
+              <p>Address</p>
+              <address>
+                <a href="https://maps.app.goo.gl/oZp67tjdCpdwoqaeA" class="link-secondary" target="_blank">203, 2nd Main, 12th Cross, A Sector,<br> Yelahanka New Town, Bengaluru, India.</a>
+              </address>
+            </div>
+            <div class="separator"></div>
+          </div>
+          <div class="icon-text">
+            <img src="/images/phone.png" alt="Phone Icon">
+            <div>
+              <p>Phone</p>
+              <a class="link-secondary" href="tel:+91-9743771209">+91-9743771209</a>
+            </div>
+            <div class="separator"></div>
+          </div>
+          <div class="icon-text">
+            <img src="/images/mail.png" alt="Mail Icon">
+            <div>
+              <p>E-Mail</p>
+              <a class="link-secondary" href="mailto:nayan.kumar.ys@outlook.com">nayan.kumar.ys@outlook.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 content-right">
+          <div class="bg-white form-container">
+            <form action="#!">
+              <div class="mb-3">
+                <label for="fullname" class="form-label">Full Name <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="fullname" name="fullname" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" name="phone">
+              </div>
+              <div class="mb-3">
+                <label for="subject" class="form-label">Subject <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="subject" name="subject" required>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
+                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+              </div>
+              <div class="d-grid">
+                <button class="btn" type="submit">Send Message</button>
+              </div>
+            </form>
+          </div>
+	<footer>
+        <p>Copyright &copy; 2024 Just a Bit.</p>
+    </footer>        	
+		</div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --main-bg-color: rgba(60, 60, 60, 0.4);
+            --text-color: white;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-image: url('images/background.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+        }
+        .container {
+            display: flex;
+            height: 90vh;
+            margin: 0 5%;
+            backdrop-filter: blur(10px);
+        }
+        .left-panel {
+            width: 30%;
+            background-color: rgba(51, 51, 51, 0.4);
+            color: white;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+        .left-panel ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .left-panel ul li {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .left-panel ul li:hover {
+            background-color: rgba(87, 87, 87, 0.4);
+            transform: translateX(5px);
+        }
+        .left-panel ul li img {
+            margin-right: 10px;
+            width: 24px;
+            height: 24px;
+        }
+        .details-panel {
+            width: 70%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.4);
+            text-align: center;
+            border-radius: 10px;
+        }
+        .details-panel h2 {
+            font-family: 'Cinzel', serif;
+            text-align: center;
+            margin: 3% 0 2%;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-weight: 400;
+            font-size: 3em;
+            padding: 2px;
+            letter-spacing: 4px;
+            color: white;
+        }
+        .details-panel p {
+            color: white;
+            font-size: 1.2em;
+        }
+        footer {
+            background-color: var(--main-bg-color);
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            right: 0;
+            text-align: right;
+            color: var(--text-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <ul>
+                <li onclick="showDetails('project1')"><img src="images/arrow.png" alt="bullet">Project 1</li>
+                <li onclick="showDetails('project2')"><img src="images/arrow.png" alt="bullet">Project 2</li>
+                <li onclick="showDetails('project3')"><img src="images/arrow.png" alt="bullet">Project 3</li>
+                <li onclick="showDetails('project4')"><img src="images/arrow.png" alt="bullet">Project 4</li>
+                <li onclick="showDetails('project5')"><img src="images/arrow.png" alt="bullet">Project 5</li>
+                <li onclick="showDetails('project6')"><img src="images/arrow.png" alt="bullet">Project 6</li>
+                <li onclick="showDetails('project7')"><img src="images/arrow.png" alt="bullet">Project 7</li>
+            </ul>
+        </div>
+        <div class="details-panel" id="details-panel">
+            <h2>WELCOME TO PROJECTS</h2>
+            <p>Click on a project to see the details.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Copyright &copy; 2024 Just a Bit.</p>
+    </footer>
+
+    <script>
+        function showDetails(project) {
+            const detailsPanel = document.getElementById('details-panel');
+            let details = '';
+
+            switch (project) {
+                case 'project1':
+                    details = '<h2>Project 1</h2><p>Details of Project 1...</p>';
+                    break;
+                case 'project2':
+                    details = '<h2>Project 2</h2><p>Details of Project 2...</p>';
+                    break;
+                case 'project3':
+                    details = '<h2>Project 3</h2><p>Details of Project 3...</p>';
+                    break;
+                case 'project4':
+                    details = '<h2>Project 4</h2><p>Details of Project 4...</p>';
+                    break;
+                case 'project5':
+                    details = '<h2>Project 5</h2><p>Details of Project 5...</p>';
+                    break;
+                case 'project6':
+                    details = '<h2>Project 6</h2><p>Details of Project 6...</p>';
+                    break;
+                case 'project7':
+                    details = '<h2>Project 7</h2><p>Details of Project 7...</p>';
+                    break;
+                default:
+                    details = '<h2>Welcome to Projects</h2><p>Click on a project to see the details.</p>';
+                    break;
+            }
+
+            detailsPanel.innerHTML = details;
+        }
+    </script>
+</body>
+</html>

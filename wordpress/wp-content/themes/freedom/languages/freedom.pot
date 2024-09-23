@@ -1,0 +1,651 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Freedom\n"
+"POT-Creation-Date: 2014-10-21 22:38+0545\n"
+"PO-Revision-Date: 2014-10-21 22:38+0545\n"
+"Last-Translator: \n"
+"Language-Team: ThemeGrill <themegrill@gmail.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-Basepath: ../\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_attr_x;_x;_nx;_ex;esc_attr__;esc_attr_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:22
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:24
+msgid "It looks like nothing was found at this location. Try the search below."
+msgstr ""
+
+#: archive.php:34 inc/header-functions.php:143
+#, php-format
+msgid "Author: %s"
+msgstr ""
+
+#: archive.php:42 inc/header-functions.php:151
+#, php-format
+msgid "Day: %s"
+msgstr ""
+
+#: archive.php:45 inc/header-functions.php:154
+#, php-format
+msgid "Month: %s"
+msgstr ""
+
+#: archive.php:48 inc/header-functions.php:157
+#, php-format
+msgid "Year: %s"
+msgstr ""
+
+#: archive.php:51 inc/header-functions.php:160
+msgid "Asides"
+msgstr ""
+
+#: archive.php:54 inc/header-functions.php:163
+msgid "Images"
+msgstr ""
+
+#: archive.php:57 inc/header-functions.php:166
+msgid "Videos"
+msgstr ""
+
+#: archive.php:60 inc/header-functions.php:169
+msgid "Quotes"
+msgstr ""
+
+#: archive.php:63 inc/header-functions.php:172
+msgid "Links"
+msgstr ""
+
+#: archive.php:66 inc/header-functions.php:175 sidebar-left.php:29
+#: sidebar.php:29
+msgid "Archives"
+msgstr ""
+
+#: comments.php:31
+#, php-format
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgstr ""
+
+#: comments.php:38 comments.php:55
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:39 comments.php:56
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:40 comments.php:57
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:67
+msgid "Comments are closed."
+msgstr ""
+
+#: content-page.php:24 content-single.php:27
+msgid "Pages:"
+msgstr ""
+
+#: content.php:42
+msgid "Read more"
+msgstr ""
+
+#: header.php:87
+msgid "Menu"
+msgstr ""
+
+#: inc/admin/meta-boxes.php:16 inc/admin/meta-boxes.php:18
+msgid "Select Layout"
+msgstr ""
+
+#: inc/admin/meta-boxes.php:28
+msgid "Default Layout"
+msgstr ""
+
+#: inc/admin/meta-boxes.php:33 inc/widgets/widgets.php:18
+msgid "Right Sidebar"
+msgstr ""
+
+#: inc/admin/meta-boxes.php:38 inc/widgets/widgets.php:29
+msgid "Left Sidebar"
+msgstr ""
+
+#: inc/admin/meta-boxes.php:43
+msgid "No Sidebar Full Width"
+msgstr ""
+
+#: inc/admin/meta-boxes.php:48
+msgid "No Sidebar Content Centered"
+msgstr ""
+
+#: inc/admin/options/includes/class-options-framework-admin.php:85
+#: inc/admin/options/includes/class-options-framework-admin.php:86
+#: inc/admin/options/includes/class-options-framework-admin.php:307
+msgid "Theme Options"
+msgstr ""
+
+#: inc/admin/options/includes/class-options-framework-admin.php:173
+msgid "Save Options"
+msgstr ""
+
+#: inc/admin/options/includes/class-options-framework-admin.php:174
+msgid "Restore Defaults"
+msgstr ""
+
+#: inc/admin/options/includes/class-options-framework-admin.php:174
+msgid "Click OK to reset. Any theme settings will be lost!"
+msgstr ""
+
+#: inc/admin/options/includes/class-options-framework-admin.php:205
+msgid "Default options restored."
+msgstr ""
+
+#: inc/admin/options/includes/class-options-framework-admin.php:259
+msgid "Options saved."
+msgstr ""
+
+#: inc/admin/options/includes/class-options-media-uploader.php:63
+msgid "No file chosen"
+msgstr ""
+
+#: inc/admin/options/includes/class-options-media-uploader.php:66
+#: inc/admin/options/includes/class-options-media-uploader.php:119
+msgid "Upload"
+msgstr ""
+
+#: inc/admin/options/includes/class-options-media-uploader.php:68
+#: inc/admin/options/includes/class-options-media-uploader.php:120
+msgid "Remove"
+msgstr ""
+
+#: inc/admin/options/includes/class-options-media-uploader.php:71
+msgid "Upgrade your version of WordPress for full media support."
+msgstr ""
+
+#: inc/admin/options/includes/class-options-media-uploader.php:95
+msgid "View File"
+msgstr ""
+
+#: inc/admin/options/includes/class-options-sanitization.php:241
+msgid "No Repeat"
+msgstr ""
+
+#: inc/admin/options/includes/class-options-sanitization.php:242
+msgid "Repeat Horizontally"
+msgstr ""
+
+#: inc/admin/options/includes/class-options-sanitization.php:243
+msgid "Repeat Vertically"
+msgstr ""
+
+#: inc/admin/options/includes/class-options-sanitization.php:244
+msgid "Repeat All"
+msgstr ""
+
+#: inc/admin/options/includes/class-options-sanitization.php:257
+msgid "Top Left"
+msgstr ""
+
+#: inc/admin/options/includes/class-options-sanitization.php:258
+msgid "Top Center"
+msgstr ""
+
+#: inc/admin/options/includes/class-options-sanitization.php:259
+msgid "Top Right"
+msgstr ""
+
+#: inc/admin/options/includes/class-options-sanitization.php:260
+msgid "Middle Left"
+msgstr ""
+
+#: inc/admin/options/includes/class-options-sanitization.php:261
+msgid "Middle Center"
+msgstr ""
+
+#: inc/admin/options/includes/class-options-sanitization.php:262
+msgid "Middle Right"
+msgstr ""
+
+#: inc/admin/options/includes/class-options-sanitization.php:263
+msgid "Bottom Left"
+msgstr ""
+
+#: inc/admin/options/includes/class-options-sanitization.php:264
+msgid "Bottom Center"
+msgstr ""
+
+#: inc/admin/options/includes/class-options-sanitization.php:265
+msgid "Bottom Right"
+msgstr ""
+
+#: inc/admin/options/includes/class-options-sanitization.php:278
+msgid "Scroll Normally"
+msgstr ""
+
+#: inc/admin/options/includes/class-options-sanitization.php:279
+msgid "Fixed in Place"
+msgstr ""
+
+#: inc/admin/options/includes/class-options-sanitization.php:353
+msgid "Normal"
+msgstr ""
+
+#: inc/admin/options/includes/class-options-sanitization.php:354
+msgid "Italic"
+msgstr ""
+
+#: inc/admin/options/includes/class-options-sanitization.php:355
+msgid "Bold"
+msgstr ""
+
+#: inc/admin/options/includes/class-options-sanitization.php:356
+msgid "Bold Italic"
+msgstr ""
+
+#: inc/functions.php:222 inc/functions.php:238 inc/functions.php:270
+msgid ", "
+msgstr ""
+
+#: inc/functions.php:223 inc/functions.php:271
+#, php-format
+msgid ""
+"<span class=\"cat-links\"><i class=\"fa fa-folder-open\"></i>%1$s</span>"
+msgstr ""
+
+#: inc/functions.php:232 inc/functions.php:264
+#, php-format
+msgid ""
+"<span class=\"posted-on\"><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark"
+"\"><i class=\"fa fa-calendar-o\"></i> %3$s</a></span>"
+msgstr ""
+
+#: inc/functions.php:242
+msgid "<i class=\"fa fa-comment\"></i> 0 Comment"
+msgstr ""
+
+#: inc/functions.php:242
+msgid "<i class=\"fa fa-comment\"></i> 1 Comment"
+msgstr ""
+
+#: inc/functions.php:242
+msgid "<i class=\"fa fa-comments\"></i> % Comments"
+msgstr ""
+
+#: inc/functions.php:245
+msgid "Edit"
+msgstr ""
+
+#: inc/functions.php:347
+msgid "Post navigation"
+msgstr ""
+
+#: inc/functions.php:351 navigation.php:44
+msgid "&larr;"
+msgstr ""
+
+#: inc/functions.php:352 navigation.php:45
+msgid "&rarr;"
+msgstr ""
+
+#: inc/functions.php:357
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr ""
+
+#: inc/functions.php:361
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: inc/functions.php:387
+msgid "Pingback:"
+msgstr ""
+
+#: inc/functions.php:387
+msgid "(Edit)"
+msgstr ""
+
+#: inc/functions.php:402
+msgid "Post author"
+msgstr ""
+
+#: inc/functions.php:405
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: inc/functions.php:413
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: inc/functions.php:418
+msgid "Reply"
+msgstr ""
+
+#: inc/functions.php:436
+msgid "WordPress"
+msgstr ""
+
+#: inc/functions.php:437
+msgid "ThemeGrill"
+msgstr ""
+
+#: inc/functions.php:439
+msgid "Copyright &copy; "
+msgstr ""
+
+#: inc/functions.php:439
+msgid ".&nbsp;Powered by&nbsp;"
+msgstr ""
+
+#: inc/functions.php:439
+msgid "."
+msgstr ""
+
+#: inc/header-functions.php:47
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: inc/header-functions.php:180
+msgid "Page NOT Found"
+msgstr ""
+
+#: inc/header-functions.php:183
+msgid "Search Results"
+msgstr ""
+
+#: inc/widgets/widgets.php:20
+msgid "Shows widgets at Right side."
+msgstr ""
+
+#: inc/widgets/widgets.php:31
+msgid "Shows widgets at Left side."
+msgstr ""
+
+#: inc/widgets/widgets.php:40
+msgid "Header Sidebar"
+msgstr ""
+
+#: inc/widgets/widgets.php:42
+msgid "Shows widgets in header section just above the main navigation menu."
+msgstr ""
+
+#: inc/widgets/widgets.php:51
+msgid "Contact Page Sidebar"
+msgstr ""
+
+#: inc/widgets/widgets.php:53
+msgid "Shows widgets on Contact Page Template."
+msgstr ""
+
+#: inc/widgets/widgets.php:62
+msgid "Error 404 Page Sidebar"
+msgstr ""
+
+#: inc/widgets/widgets.php:64
+msgid "Shows widgets on Error 404 page."
+msgstr ""
+
+#: inc/widgets/widgets.php:73
+msgid "Footer Sidebar One"
+msgstr ""
+
+#: inc/widgets/widgets.php:75
+msgid "Shows widgets at footer sidebar one."
+msgstr ""
+
+#: inc/widgets/widgets.php:84
+msgid "Footer Sidebar Two"
+msgstr ""
+
+#: inc/widgets/widgets.php:86
+msgid "Shows widgets at footer sidebar two."
+msgstr ""
+
+#: navigation.php:24 navigation.php:36
+msgid "&larr; Previous"
+msgstr ""
+
+#: navigation.php:25 navigation.php:37
+msgid "Next &rarr;"
+msgstr ""
+
+#: no-results.php:18
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: no-results.php:22
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: no-results.php:27
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: options.php:27
+msgid "Header"
+msgstr ""
+
+#: options.php:33
+msgid "Header Logo"
+msgstr ""
+
+#: options.php:34
+msgid "Upload logo for your header."
+msgstr ""
+
+#: options.php:41
+msgid "Header Logo Only"
+msgstr ""
+
+#: options.php:42
+msgid "Header Text Only"
+msgstr ""
+
+#: options.php:43
+msgid "Show Both"
+msgstr ""
+
+#: options.php:44
+msgid "Disable"
+msgstr ""
+
+#: options.php:47
+msgid "Show"
+msgstr ""
+
+#: options.php:48
+msgid "Choose the option that you want."
+msgstr ""
+
+#: options.php:57
+msgid "Need to replace Header Image?"
+msgstr ""
+
+#: options.php:58 options.php:158
+#, php-format
+msgid "<a href=\"%1$s\">Click Here</a>"
+msgstr ""
+
+#: options.php:65
+msgid "Design"
+msgstr ""
+
+#: options.php:70
+msgid "Site Layout"
+msgstr ""
+
+#: options.php:71
+msgid "Choose your site layout. The change is reflected in whole site."
+msgstr ""
+
+#: options.php:76
+msgid "Boxed layout"
+msgstr ""
+
+#: options.php:77
+msgid "Wide layout"
+msgstr ""
+
+#: options.php:82
+msgid "Default layout"
+msgstr ""
+
+#: options.php:83
+msgid ""
+"Select default layout. This layout will be reflected in whole site archives, "
+"categories, search page etc. The layout for a single post and page can be "
+"controlled from below options."
+msgstr ""
+
+#: options.php:96
+msgid "Default layout for pages only"
+msgstr ""
+
+#: options.php:97
+msgid ""
+"Select default layout for pages. This layout will be reflected in all pages "
+"unless unique layout is set for specific page."
+msgstr ""
+
+#: options.php:110
+msgid "Default layout for single posts only"
+msgstr ""
+
+#: options.php:111
+msgid ""
+"Select default layout for single posts. This layout will be reflected in all "
+"single posts unless unique layout is set for specific post."
+msgstr ""
+
+#: options.php:124
+msgid "Posts page listing display type"
+msgstr ""
+
+#: options.php:125
+msgid ""
+"Choose the display type for the latest posts view or posts page view (static "
+"front page)."
+msgstr ""
+
+#: options.php:130 options.php:142
+msgid "Photo blogging view (two column)"
+msgstr ""
+
+#: options.php:131 options.php:143
+msgid "Normal view"
+msgstr ""
+
+#: options.php:136
+msgid "Archive/Category posts listing display type"
+msgstr ""
+
+#: options.php:137
+msgid "Choose the display type for the archive/category view."
+msgstr ""
+
+#: options.php:149
+msgid "Primary color option"
+msgstr ""
+
+#: options.php:150
+msgid ""
+"This will reflect in links, buttons and many others. Choose a color to match "
+"your site."
+msgstr ""
+
+#: options.php:157
+msgid "Need to replace default background?"
+msgstr ""
+
+#: options.php:158
+msgid ""
+"Note: The background will only be seen if you choose any of the boxed layout "
+"option in site layout option."
+msgstr ""
+
+#: options.php:163
+msgid "Custom CSS"
+msgstr ""
+
+#: options.php:164
+msgid "Write your custom css."
+msgstr ""
+
+#: options.php:173
+msgid "Slider"
+msgstr ""
+
+#: options.php:179
+msgid "Activate slider"
+msgstr ""
+
+#: options.php:180
+msgid "Check to activate slider."
+msgstr ""
+
+#: options.php:189
+#, php-format
+msgid "Slider #%1$s"
+msgstr ""
+
+#: options.php:190
+msgid "Upload image"
+msgstr ""
+
+#: options.php:195
+msgid "Enter title for this slide"
+msgstr ""
+
+#: options.php:201
+msgid "Enter description for this slide"
+msgstr ""
+
+#: options.php:207
+msgid "Enter the button text."
+msgstr ""
+
+#: options.php:213
+msgid "Enter link to redirect for the slide"
+msgstr ""
+
+#: options.php:234
+msgid "Freedom"
+msgstr ""
+
+#: options.php:236
+msgid "Upgrade to Pro"
+msgstr ""
+
+#: options.php:237
+msgid "Support Forum"
+msgstr ""
+
+#: options.php:238
+msgid "Documentation"
+msgstr ""
+
+#: options.php:239
+msgid "View Demo"
+msgstr ""
+
+#: searchform.php:11 searchform.php:12
+msgid "Search"
+msgstr ""
+
+#: sidebar-left.php:36 sidebar.php:36
+msgid "Meta"
+msgstr ""
