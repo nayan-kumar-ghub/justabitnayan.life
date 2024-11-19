@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NayanKumar</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100|Cinzel:wght@400..900&display=swap');
+    
+    :root {
+      --bg-color: #212121;
+      --text-color: #fafafa;
+      --dud-color: #757575;
+      --title-margin-top: 8%;
+      --title-font-size: 4em;
+      --title-shadow-color: rgba(0, 0, 0, 0.7);
+      --icon-size: 60px;
+      --social-icon-size: 40px;
+      --icon-margin: 25px;
+      --social-margin-bottom: 5%;
+      --content-bg-color: rgba(255, 255, 255, 0.3);
+      --link-text-font-size: 20px; /* Increased font size */
+      --content-height: 40vh; /* Added new variable for content height */
+    }
+    
+    html, body {
+      font-family: 'Roboto Mono', monospace;
+      background: var(--bg-color);
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    
+    .text-container {
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100%;
+      text-align: center;
+    }
+    
+    .text {
+      font-weight: 100;
+      font-size: 30px;
+      color: var(--text-color);
+      text-align: center;
+    }
+    
+    .dud {
+      color: var(--dud-color);
+    }
+    
+    .main-page {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      background: url('/images/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      pointer-events: none;
+      z-index: 2;
+    }
+    
+    .main-page.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    
+    .title {
+      margin-top: var(--title-margin-top);
+      font-size: var(--title-font-size);
+      text-align: center;
+      color: white;
+      text-shadow: 2px 2px 4px var(--title-shadow-color);
+      font-family: 'Cinzel', serif;
+      padding: 10px;
+      letter-spacing: 4px;
+    }
+    
+    .main-page .content {
+      text-align: center;
+      background-color: var(--content-bg-color);
+      padding: 30px;
+      border-radius: 10px;
+      width: 700px;
+      max-width: 800px;
+      font-size: 18px;
+      height: var(--content-height); /* Set height using the new variable */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .icons {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--icon-margin);
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    
+    .icons a {
+      text-decoration: none;
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.2s;
+    }
+    
+    .icons a:hover {
+      transform: scale(1.1);
+    }
+    
+    .icons a img {
+      width: var(--icon-size);
+      height: var(--icon-size);
+      margin-bottom: 10px;
+    }
+    
+    .icons a p {
+      font-size: var(--link-text-font-size); /* Increased font size */
+      margin: 0;
+    }
+    
+    .social {
+      margin-bottom: var(--social-margin-bottom);
+      display: flex;
+      justify-content: center;
+    }
+    
+    .social a {
+      margin: 0 10px;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+    
+    .social a:hover {
+      transform: scale(1.1);
+    }
+    
+    .social a img {
+      width: var(--social-icon-size);
+      height: var(--social-icon-size);
+    }
+    
+    .aboutme-technow-blog {
+      margin-bottom: 45px; /* Move these icons higher */
+    }
+    
+    .projects-resume-contact {
+      margin-top: 45px; /* Move these icons lower */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="text-container" id="textContainer">
+      <div class="text"></div>
+    </div>
+    <div class="main-page" id="mainPage">
+      <div class="title">JUST A BIT</div>
+      <div class="content">
+        <div class="icons aboutme-technow-blog">
+          <a href="AboutMe.html" target="_blank" aria-label="About Me">
+            <img src="/images/info.png" alt="About Me">
+            <p>AboutMe</p>
+          </a>
+          <a href="TechNowLogy.html" target="_blank" aria-label="TechNow">
+            <img src="/images/technowlogy.png" alt="TechNow">
+            <p>TechNow</p>
+          </a>
+          <a href="http://192.168.10.5/wordpress/" target="_blank" aria-label="Blog">
+            <img src="/images/blog.png" alt="Blog">
+            <p>Blog</p>
+          </a>
+        </div>
+        <div class="icons projects-resume-contact">
+          <a href="Projects.html" target="_blank" aria-label="Projects">
+            <img src="/images/projects.png" alt="Projects">
+            <p>Projects</p>
+          </a>
+          <a href="/docs/NAYAN_RESUME.pdf" target="_blank" aria-label="Résumé">
+            <img src="/images/cv.png" alt="Résumé">
+            <p>Résumé</p>
+          </a>
+          <a href="Contact.html" target="_blank" aria-label="Contact">
+            <img src="/images/contact-mail.png" alt="Contact">
+            <p>Contact</p>
+          </a>
+        </div>
+      </div>
+      <div class="social">
+        <a href="https://www.youtube.com/@Just_a_Bit" target="_blank" aria-label="YouTube">
+          <img src="/images/youtube.png" alt="YouTube">
+        </a>
+        <a href="https://www.instagram.com/instgmnayan/profilecard/?igsh=cDZucWR3eW5jN3ph" target="_blank" aria-label="Instagram">
+          <img src="/images/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://www.linkedin.com/in/nayanlinkdn/" target="_blank" aria-label="LinkedIn">
+          <img src="/images/linkedn.png" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/nayan-kumar-ghub" target="_blank" aria-label="GitHub">
+          <img src="/images/github.png" alt="GitHub">
+        </a>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.getElementById('textContainer').addEventListener('click', function() {
+      document.getElementById('mainPage').classList.toggle('visible');
+    });
+
+    class TextScramble {
+      constructor(el) {
+        this.el = el;
+        this.chars = '!<>-_\\/[]{}—=+*^?#________';
+        this.update = this.update.bind(this);
+      }
+      setText(newText) {
+        const oldText = this.el.innerText;
+        const length = Math.max(oldText.length, newText.length);
+        const promise = new Promise((resolve, reject) => {
+          this.resolve = resolve;
+          this.reject = reject;
+        });
+        this.queue = [];
+        for (let i = 0; i < length; i++) {
+          const from = oldText[i] || '';
+          const to = newText[i] || '';
+          const start = Math.floor(Math.random() * 40);
+          const end = start + Math.floor(Math.random() * 40);
+          this.queue.push({ from, to, start, end });
+        }
+        cancelAnimationFrame(this.frameRequest);
+        this.frame = 0;
+        this.update();
+        return promise.catch(error => console.error(error));
+      }
+      update() {
+        let output = '';
+        let complete = 0;
+        for (let i = 0, n = this.queue.length; i < n; i++) {
+          let { from, to, start, end, char } = this.queue[i];
+          if (this.frame >= end) {
+            complete++;
+            output += to;
+          } else if (this.frame >= start) {
+            if (!char || Math.random() < 0.28) {
+              char = this.randomChar();
+              this.queue[i].char = char;
+            }
+            output += `<span class="dud">${char}</span>`;
+          } else {
+            output += from;
+          }
+        }
+        this.el.innerHTML = output;
+        if (complete === this.queue.length) {
+          this.resolve();
+        } else {
+          this.frameRequest = requestAnimationFrame(this.update);
+          this.frame++;
+        }
+      }
+      randomChar() {
+        return this.chars[Math.floor(Math.random() * this.chars.length)];
+      }
+    }
+
+    const phrases = [
+      'Nayan Kumar',
+      'Tech Enthusiast',
+      'DevOps Engineer',
+      'Hiker',
+      'nayan.kumar.ys@outlook.com',
+      '+91-9743771209'
+    ];
+
+    const el = document.querySelector('.text');
+    const fx = new TextScramble(el);
+
+    let counter = 0;
+    const next = () => {
+      fx.setText(phrases[counter]).then(() => {
+        setTimeout(next, 800);
+      });
+      counter = (counter + 1) % phrases.length;
+    };
+
+    next();
+  </script>
+</body>
+</html>
