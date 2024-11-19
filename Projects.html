@@ -76,6 +76,18 @@
             color: white;
             font-size: 1.2em;
         }
+        
+        /* Left-aligned bullet points */
+        .details-panel ul {
+            text-align: left;
+            list-style-position: inside;
+            padding-left: 20px;
+        }
+
+        .details-panel li {
+            margin-bottom: 10px;
+        }
+
         footer {
             background-color: var(--main-bg-color);
             padding: 10px;
@@ -112,39 +124,61 @@
     </footer>
 
     <script>
-        function showDetails(project) {
-            const detailsPanel = document.getElementById('details-panel');
-            let details = '';
+    function showDetails(project) {
+        const detailsPanel = document.getElementById('details-panel');
+        let details = '';
 
-            switch (project) {
-                case 'project1':
-                    details = '<h2>Project 1</h2><p>Details of Project 1...</p>';
-                    break;
-                case 'project2':
-                    details = '<h2>Project 2</h2><p>Details of Project 2...</p>';
-                    break;
-                case 'project3':
-                    details = '<h2>Project 3</h2><p>Details of Project 3...</p>';
-                    break;
-                case 'project4':
-                    details = '<h2>Project 4</h2><p>Details of Project 4...</p>';
-                    break;
-                case 'project5':
-                    details = '<h2>Project 5</h2><p>Details of Project 5...</p>';
-                    break;
-                case 'project6':
-                    details = '<h2>Project 6</h2><p>Details of Project 6...</p>';
-                    break;
-                case 'project7':
-                    details = '<h2>Project 7</h2><p>Details of Project 7...</p>';
-                    break;
-                default:
-                    details = '<h2>Welcome to Projects</h2><p>Click on a project to see the details.</p>';
-                    break;
-            }
+        switch (project) {
+            case 'project1':
+                details = `<h2>Automated User and Directory Management for DevOps Environments</h2>
+                    <p><strong>Overview:</strong> This project automates the process of adding users to a server, 
+                    assigning them to a specific group ('devops'), and creating a project directory with appropriate 
+                    ownership and permissions. The script simplifies user and group management for system administrators.</p>
+                    
+                    <p><strong>Components:</strong></p>
+                    <ul>
+                        <li><strong>Python Language & Libraries:</strong> The script is written in Python, using the <code>os</code> 
+                        and <code>time</code> libraries to interact with the operating system and manage delays.</li>
+                        <li><strong>User List:</strong> Predefined list of users that need to be added to the server.</li>
+                        <li><strong>Group Creation:</strong> Checks if the 'devops' group exists and creates it if not.</li>
+                        <li><strong>User Group Assignment:</strong> Ensures users are added to the 'devops' group.</li>
+                        <li><strong>User Creation:</strong> Adds users to the system if they do not already exist.</li>
+                        <li><strong>Directory Management:</strong> Creates a project directory if it does not exist and sets ownership.</li>
+                        <li><strong>Directory Ownership and Permissions:</strong> Assigns the appropriate ownership and permissions 
+                        (chmod 770) to ensure secure access control.</li>
+                    </ul>
 
-            detailsPanel.innerHTML = details;
+                    <p><strong>Conclusion:</strong> This project provides a reliable and efficient method to manage user accounts, 
+                    group memberships, and directory permissions in a Linux environment, reducing manual intervention.</p>
+
+                    <p><strong>GitHub Repository:</strong> 
+                    <a href="https://github.com/nayan-kumar-ghub/PythonProjects/blob/master/Automation_01.py" target="_blank">View code on GitHub</a></p>`;
+                break;
+            case 'project2':
+                details = '<h2>Project 2</h2><p>Details of Project 2...</p>';
+                break;
+            case 'project3':
+                details = '<h2>Project 3</h2><p>Details of Project 3...</p>';
+                break;
+            case 'project4':
+                details = '<h2>Project 4</h2><p>Details of Project 4...</p>';
+                break;
+            case 'project5':
+                details = '<h2>Project 5</h2><p>Details of Project 5...</p>';
+                break;
+            case 'project6':
+                details = '<h2>Project 6</h2><p>Details of Project 6...</p>';
+                break;
+            case 'project7':
+                details = '<h2>Project 7</h2><p>Details of Project 7...</p>';
+                break;
+            default:
+                details = '<h2>Welcome to Projects</h2><p>Click on a project to see the details.</p>';
+                break;
         }
+
+        detailsPanel.innerHTML = details;
+    }
     </script>
 </body>
 </html>

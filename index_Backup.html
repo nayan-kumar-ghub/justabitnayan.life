@@ -175,52 +175,6 @@
       margin-top: 45px; /* Move these icons lower */
     }
   </style>
-
-<style>
-:root {
-  --content-height: auto; /* Allow content height to adjust dynamically */
-}
-
-html, body {
-  overflow: auto; /* Enable scrolling for smaller screens */
-}
-
-.container {
-  padding: 10px; /* Add some padding for smaller screens */
-}
-
-.main-page .content {
-  width: 90%; /* Adjust width for smaller devices */
-  max-width: 700px; /* Keep a reasonable max width */
-  padding: 15px;
-}
-
-.icons {
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Flexible grid */
-  gap: 15px; /* Adjust spacing for smaller screens */
-}
-
-.icons a img {
-  width: 50px; /* Smaller icon size for compact view */
-  height: 50px;
-}
-
-@media (min-width: 768px) {
-  :root {
-    --content-height: 40vh; /* Restore content height for larger screens */
-  }
-
-  .main-page .content {
-    padding: 30px; /* Restore padding */
-    width: 700px; /* Fixed width for larger screens */
-  }
-
-  .icons a img {
-    width: var(--icon-size); /* Larger icons */
-    height: var(--icon-size);
-  }
-}
-</style>
 </head>
 <body>
   <div class="container">
@@ -359,13 +313,5 @@ html, body {
 
     next();
   </script>
-
-<script>
-window.addEventListener('resize', () => {
-  const screenWidth = window.innerWidth;
-  console.log(`Screen resized to ${screenWidth}px`);
-  // Additional screen-specific adjustments can be made here if needed.
-});
-</script>
 </body>
 </html>
