@@ -1,0 +1,77 @@
+/* Responsive Styling for Reuse */
+:root {
+  --main-bg-color: #212121;
+  --text-color: #fafafa;
+  --link-color: #00bcd4;
+  --icon-size: 60px;
+  --icon-margin: 15px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: var(--text-color);
+}
+
+.tm-bg {
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.tm-content-title {
+  font-size: 2.5em;
+  margin-top: 20%;
+  text-align: center;
+}
+
+.tm-image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+footer {
+  background-color: var(--main-bg-color);
+  padding: 10px;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.media {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.media i {
+  font-size: 2rem;
+  margin-right: 15px;
+}
+
+@media (max-width: 768px) {
+  .tm-content-title {
+    font-size: 2em;
+    margin-top: 15%;
+  }
+
+  .media {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .media i {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tm-content-title {
+    font-size: 1.5em;
+    margin-top: 10%;
+  }
+
+  .media i {
+    font-size: 1.5rem;
+  }
+}
