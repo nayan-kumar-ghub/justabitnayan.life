@@ -19,7 +19,33 @@
             background-attachment: fixed;
             background-position: center;
         }
+		
+		.home-link {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        display: flex;
+        align-items: center;
+        background-color: rgba(51, 51, 51, 0.6);
+		font-family: 'Gugi', sans-serif;
+        padding: 10px 15px;
+        border-radius: 5px;
+        text-decoration: none;
+        color: white;
+        transition: background-color 0.3s, transform 0.2s;
+		}
 
+		.home-link img {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+		}
+
+		.home-link:hover {
+        background-color: rgba(87, 87, 87, 0.8);
+        transform: scale(1.05);
+		}
+		
         .tm-nav, .tm-site-header, .tm-site-footer {
             display: none;
         }
@@ -101,12 +127,10 @@
     <div id="overlay"></div>
 
     <!-- Home Icon and Text -->
-    <div style="position: absolute; top: 10px; left: 10px; z-index: 1001;">
-        <a href="index.html" style="display: flex; align-items: center; text-decoration: none; color: white;">
-            <img src="images/home.png" alt="HOME" style="width: 30px; height: 30px; margin-right: 8px;">
-            <span style="font-family: 'Gugi', sans-serif; font-size: 1.2em;">HOME</span>
-        </a>
-    </div>
+    <a href="index.html" class="home-link">
+        <img src="images/home.png" alt="HOME">
+        <span>HOME</span>
+    </a>
 
     <div class="tm-container">
         <div>
