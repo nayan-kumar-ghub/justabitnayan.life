@@ -7,14 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>About Me</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="fontawesome/css/all.min.css" rel="stylesheet" />
     <link href="css/templatemo-diagoona.css" rel="stylesheet" />
 
     <style>
         .tm-bg {
-            background-image: url('images/background.jpg'); /* Replace with your image path */
+            background-image: url('images/background.jpg');
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
@@ -25,10 +25,10 @@
         }
 
         .tm-content-title {
-            font-family: 'Cinzel', serif;
+            font-family: 'Gugi', sans-serif;
             font-size: 3em;
-            margin-top: 28%;
-            margin-left: 20%; /* Adjust this value as needed to align it slightly to the right */
+            margin-top: 15%;
+            text-align: center;
         }
 
         #overlay {
@@ -39,7 +39,7 @@
             height: 100%;
             background: black;
             z-index: 1000;
-            transition: opacity 2s ease-out; /* Smooth transition */
+            transition: opacity 2s ease-out;
             opacity: 1;
             visibility: visible;
         }
@@ -56,29 +56,69 @@
             width: 100%;
             bottom: 0;
             right: 0;
-            text-align: right;
+            text-align: center;
             color: var(--text-color);
         }
 
-        /* Style for the image */
         .tm-image-container {
-            position: absolute;
-            top: 16%; /* Adjust this to position the image vertically */
-            left: 20%; /* Adjust this to position the image horizontally */
-            z-index: 1001; /* Ensure the image appears above the .tm-bg */
+            position: relative;
+            max-width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
         }
 
         .tm-image-container img {
-            max-width: 400px; /* Adjust size as per your need */
-            border-radius: 4%; /* Make it circular if required */
-            display: block;
-            margin: 0 auto; /* Center the image horizontally */
+            max-width: 100%;
+            height: auto;
+            border-radius: 4%;
+        }
+
+        .media {
+            display: flex;
+            align-items: center;
+            text-align: left;
+        }
+
+        .media-body {
+            flex: 1;
+        }
+
+        @media (max-width: 768px) {
+            .tm-content-title {
+                font-size: 2em;
+                margin-top: 10%;
+            }
+
+            .media {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .media i {
+                margin-bottom: 10px;
+            }
+
+            footer {
+                font-size: 0.8em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .tm-content-title {
+                font-size: 1.5em;
+                margin-top: 8%;
+            }
+
+            .media-body p {
+                font-size: 0.9em;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div id="overlay"></div> <!-- Full-screen overlay -->
+    <div id="overlay"></div>
 
     <div class="tm-container">        
         <div>
@@ -131,7 +171,6 @@
             <div class="tm-bg-right"></div>
         </div>
 
-        <!-- Image container -->
         <div class="tm-image-container">
             <img src="images/DevOps_Engineer.jpg" alt="DevOps Engineer">
         </div>
@@ -146,18 +185,16 @@
     <script src="js/jquery.backstretch.min.js"></script>
     <script>
         $(document).ready(function () {
-            // Adjust the script to use your specific image
             $.backstretch([
                 "images/background.jpg"
             ], { duration: 4000, fade: 750 });
 
-            // Fade out the overlay after the page loads
             $(window).on('load', function () {
                 const overlay = $('#overlay');
                 overlay.addClass('hidden');
                 setTimeout(() => {
                     overlay.remove();
-                }, 2000); // Match the transition duration
+                }, 2000);
             });
         });
     </script>
