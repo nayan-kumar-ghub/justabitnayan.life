@@ -171,16 +171,17 @@
         color: var(--text-color);
     }
     .home-link {
-      position: fixed;
-      top: 10px;
-      left: 10px;
+      position: absolute;
+      top: 15px;
+      left: 15px;
       display: flex;
       align-items: center;
-	  font-family: 'Gugi', sans-serif;
+      background-color: rgba(51, 51, 51, 0.6);
+      padding: 10px 15px;
+      border-radius: 5px;
       text-decoration: none;
-      color: var(--text-color);
-      font-size: 1.2em;
-      transition: transform 0.3s;
+      color: white;
+      transition: background-color 0.3s, transform 0.2s;
     }
     .home-link img {
       width: 30px;
