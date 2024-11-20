@@ -19,10 +19,33 @@
             padding: 0;
             color: var(--text-color);
         }
+        .header {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            align-items: center;
+            background-color: rgba(51, 51, 51, 0.6);
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .header img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+        .header:hover {
+            background-color: rgba(87, 87, 87, 0.8);
+            transform: scale(1.05);
+        }
         .container {
             display: flex;
-            flex-wrap: wrap; /* Allows wrapping of panels on smaller screens */
-            height: auto; /* Adjusts height dynamically */
+            flex-wrap: wrap;
+            height: auto;
             margin: 5% 5%;
             backdrop-filter: blur(10px);
         }
@@ -93,20 +116,20 @@
             color: var(--text-color);
         }
         img {
-            max-width: 100%; /* Makes images responsive */
-            height: auto; /* Maintains aspect ratio */
+            max-width: 100%;
+            height: auto;
         }
         /* Media Queries for Responsiveness */
         @media (max-width: 768px) {
             .container {
-                flex-direction: column; /* Stacks panels vertically */
+                flex-direction: column;
             }
             .left-panel, .details-panel {
-                width: 100%; /* Full width for each panel */
-                margin-bottom: 20px; /* Adds spacing between stacked panels */
+                width: 100%;
+                margin-bottom: 20px;
             }
             .details-panel h2 {
-                font-size: 2.5em; /* Adjust font size for smaller screens */
+                font-size: 2.5em;
             }
         }
         @media (max-width: 480px) {
@@ -114,7 +137,7 @@
                 font-size: 2em;
             }
             .details-panel p {
-                font-size: 1em; /* Smaller font for better readability */
+                font-size: 1em;
             }
             footer {
                 font-size: 0.8em;
@@ -123,6 +146,12 @@
     </style>
 </head>
 <body>
+    <!-- Home Icon -->
+    <a href="index.html" class="header">
+        <img src="images/home.png" alt="Home">
+        <span>Home</span>
+    </a>
+
     <div class="container">
         <div class="left-panel">
             <ul>
@@ -150,119 +179,26 @@
     </footer>
 
     <script>
-	function showDetails(project) {
-    const detailsPanel = document.getElementById('details-panel');
-    let details = '';
+        // JavaScript for handling project details
+        function showDetails(project) {
+            const detailsPanel = document.getElementById('details-panel');
+            let details = '';
 
-    switch (project) {
-        case 'project1':
-            details = `
-                <h2>Automated User and Directory Management for DevOps Environments</h2>
-                <p><strong>Overview:</strong> This project automates the process of adding users to a server, 
-                assigning them to a specific group ('devops'), and creating a project directory with appropriate 
-                ownership and permissions. The script simplifies user and group management for system administrators.</p>
-                
-                <p><strong>Components:</strong></p>
-                <ul>
-                    <li><strong>Python Language & Libraries:</strong> The script is written in Python, using the <code>os</code> 
-                    and <code>time</code> libraries to interact with the operating system and manage delays.</li>
-                    <li><strong>User List:</strong> Predefined list of users that need to be added to the server.</li>
-                    <li><strong>Group Creation:</strong> Checks if the 'devops' group exists and creates it if not.</li>
-                    <li><strong>User Group Assignment:</strong> Ensures users are added to the 'devops' group.</li>
-                    <li><strong>User Creation:</strong> Adds users to the system if they do not already exist.</li>
-                    <li><strong>Directory Management:</strong> Creates a project directory if it does not exist and sets ownership.</li>
-                    <li><strong>Directory Ownership and Permissions:</strong> Assigns the appropriate ownership and permissions 
-                    (chmod 770) to ensure secure access control.</li>
-                </ul>
+            switch (project) {
+                case 'project1':
+                    details = `<h2>Project 1</h2><p>Details of Project 1...</p>`;
+                    break;
+                case 'project2':
+                    details = `<h2>Project 2</h2><p>Details of Project 2...</p>`;
+                    break;
+                // Add more cases for other projects...
+                default:
+                    details = `<h2>Welcome to Projects</h2><p>Click on a project to see the details.</p>`;
+                    break;
+            }
 
-                <p><strong>Conclusion:</strong> This project provides a reliable and efficient method to manage user accounts, 
-                group memberships, and directory permissions in a Linux environment, reducing manual intervention.</p>
-
-                <p><strong>GitHub Repository:</strong> 
-                <a href="https://github.com/nayan-kumar-ghub/PythonProjects/blob/master/Automation_01.py" target="_blank">View code on GitHub</a></p>
-            `;
-            break;
-
-        case 'project2':
-            details = `
-                <h2>Hosting Static Website</h2>
-                <h2>Using AWS S3 Bucket</h2>
-                <p><strong>Overview:</strong> Host a static website using AWS S3 bucket, a simple website like personal or business site which does not require any code changes often.</p>
-                
-                <p><strong>Components:</strong></p>
-                <ul>
-                    <li><strong>AWS Account:</strong> You create and manage your AWS resources in an AWS account. </li>
-                    <li><strong>AWS S3 Bucket:</strong> S3 is an object storage service that stores data as objects within buckets.</li>
-                    <li><strong>AWS Route53:</strong> Amazon Route 53 is a highly available and scalable cloud Domain Name System (DNS) web service.</li>
-                </ul>
-                
-                <p><strong>Implementation:</strong></p>
-                <ul>
-				<li>
-					Created an S3 bucket with public access.
-					<br>
-					<img src="images/s3statichostingproject/screenshot1.jpg" alt="Step 1: S3 Bucket Creation" width="400">
-				</li>
-				<li>
-					Uploaded the code to the bucket.
-					<br>
-					<img src="images/s3statichostingproject/screenshot2.jpg" alt="Step 2: Code Upload" width="400">
-				</li>
-				<li>
-					Hosted it by enabling, "Static Website Hosting".
-					<br>
-					<img src="images/s3statichostingproject/screenshot3.jpg" alt="Step 3: Static Website Hosting" width="400">
-				</li>
-				<li>
-					Gave access to the objects that are in the S3 bucket by editing "Bucket Policy".
-					<br>
-				<img src="images/s3statichostingproject/screenshot4.jpg" alt="Step 4: Editing Bucket Policy" width="400">
-				</li>
-				<li>
-					Generated a link to access the static website.
-					<br>
-				<img src="images/s3statichostingproject/screenshot5.jpg" alt="Step 5: Access Link Generation" width="400">
-				</li>
-				<li>
-					Used Route53 to connect it to a specific domain name.
-					<br>
-					<img src="images/s3statichostingproject/screenshot6.jpg" alt="Step 6: Route53 Domain Connection" width="400">
-				</li>
-				</ul>
-          
-                <p><strong>GitHub Repository:</strong> 
-                <a href="https://github.com/nayan-kumar-ghub/S3StaticWebsiteHosting.git" target="_blank">View details on GitHub</a></p>
-            `;
-            break;
-
-        case 'project3':
-            details = '<h2>Project 3</h2><p>Details of Project 3...</p>';
-            break;
-
-        case 'project4':
-            details = '<h2>Project 4</h2><p>Details of Project 4...</p>';
-            break;
-
-        case 'project5':
-            details = '<h2>Project 5</h2><p>Details of Project 5...</p>';
-            break;
-
-        case 'project6':
-            details = '<h2>Project 6</h2><p>Details of Project 6...</p>';
-            break;
-
-        case 'project7':
-            details = '<h2>Project 7</h2><p>Details of Project 7...</p>';
-            break;
-
-        default:
-            details = '<h2>Welcome to Projects</h2><p>Click on a project to see the details.</p>';
-            break;
-    }
-
-    detailsPanel.innerHTML = details;
-}
-
+            detailsPanel.innerHTML = details;
+        }
     </script>
 </body>
 </html>
