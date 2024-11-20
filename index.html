@@ -19,8 +19,8 @@
       --icon-margin: 25px;
       --social-margin-bottom: 5%;
       --content-bg-color: rgba(255, 255, 255, 0.3);
-      --link-text-font-size: 20px; /* Increased font size */
-      --content-height: 40vh; /* Added new variable for content height */
+      --link-text-font-size: 20px;
+      --content-height: auto;
     }
     
     html, body {
@@ -56,7 +56,7 @@
     
     .text {
       font-weight: 100;
-      font-size: 30px;
+      font-size: 2rem;
       color: var(--text-color);
       text-align: center;
     }
@@ -102,12 +102,11 @@
     .main-page .content {
       text-align: center;
       background-color: var(--content-bg-color);
-      padding: 30px;
+      padding: 20px;
       border-radius: 10px;
-      width: 700px;
-      max-width: 800px;
-      font-size: 18px;
-      height: var(--content-height); /* Set height using the new variable */
+      width: 90%;
+      max-width: 700px;
+      font-size: 1rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -115,8 +114,8 @@
     
     .icons {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: var(--icon-margin);
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+      gap: 15px;
       margin-top: 10px;
       margin-bottom: 10px;
     }
@@ -142,7 +141,7 @@
     }
     
     .icons a p {
-      font-size: var(--link-text-font-size); /* Increased font size */
+      font-size: var(--link-text-font-size);
       margin: 0;
     }
     
@@ -150,16 +149,7 @@
       margin-bottom: var(--social-margin-bottom);
       display: flex;
       justify-content: center;
-    }
-    
-    .social a {
-      margin: 0 10px;
-      text-decoration: none;
-      transition: transform 0.2s;
-    }
-    
-    .social a:hover {
-      transform: scale(1.1);
+      gap: 15px;
     }
     
     .social a img {
@@ -167,12 +157,35 @@
       height: var(--social-icon-size);
     }
     
-    .aboutme-technow-blog {
-      margin-bottom: 45px; /* Move these icons higher */
+    @media (max-width: 768px) {
+      .title {
+        font-size: 2.5rem;
+      }
+      .icons a img {
+        width: 50px;
+        height: 50px;
+      }
+      .text {
+        font-size: 1.5rem;
+      }
     }
     
-    .projects-resume-contact {
-      margin-top: 45px; /* Move these icons lower */
+    @media (max-width: 480px) {
+      .title {
+        font-size: 2rem;
+        margin-top: 5%;
+      }
+      .icons {
+        grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+        gap: 10px;
+      }
+      .icons a img {
+        width: 40px;
+        height: 40px;
+      }
+      .text {
+        font-size: 1.2rem;
+      }
     }
   </style>
 </head>
