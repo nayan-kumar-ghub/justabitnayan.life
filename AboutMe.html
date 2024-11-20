@@ -61,15 +61,15 @@
         }
 
         .tm-image-container {
-            position: relative;
-            max-width: 100%;
-            margin: 0 auto;
-            text-align: center;
-            padding: 20px;
+            position: absolute;
+            top: 16%;
+            left: 20%;
+            z-index: 1001;
         }
 
         .tm-image-container img {
-            max-width: 100%;
+            max-width: 400px;
+            width: 100%;
             height: auto;
             border-radius: 4%;
         }
@@ -90,13 +90,9 @@
                 margin-top: 10%;
             }
 
-            .media {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .media i {
-                margin-bottom: 10px;
+            .tm-image-container {
+                top: 10%;
+                left: 10%;
             }
 
             footer {
@@ -108,6 +104,11 @@
             .tm-content-title {
                 font-size: 1.5em;
                 margin-top: 8%;
+            }
+
+            .tm-image-container {
+                top: 8%;
+                left: 8%;
             }
 
             .media-body p {
