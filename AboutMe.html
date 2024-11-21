@@ -21,36 +21,37 @@
         }
 		
 		.home-link {
-        position: absolute;
-        top: 15px;
-        left: 15px;
-        display: flex;
-        align-items: center;
-        justify-content: center; /* Center items within the link */
-        font-family: 'Gugi', sans-serif;
-        background-color: rgba(51, 51, 51, 0.6);
-        padding: 10px 15px;
-        border-radius: 5px;
-        text-decoration: none;
-        color: white;
-        transition: background-color 0.3s, transform 0.2s;
-        width: auto; /* Ensure the anchor size adjusts to its content */
-		}
+		position: absolute;
+		top: 15px;
+		left: 15px;
+		display: flex;
+		align-items: center;
+		justify-content: center; /* Center items within the link */
+		font-family: 'Gugi', sans-serif;
+		background-color: rgba(51, 51, 51, 0.6);
+		padding: 10px 15px;
+		border-radius: 5px;
+		text-decoration: none;
+		color: white;
+		transition: background-color 0.3s, transform 0.2s;
+		z-index: 1001; /* Ensure it is above other elements */
+		cursor: pointer; /* Ensure it looks clickable */
+	}
 
-			.home-link img {
-        width: 24px;
-        height: 24px;
-        margin-right: 8px;
-		}
+	.home-link img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+	}
 
-		.home-link:hover {
-        background-color: rgba(87, 87, 87, 0.8);
-        transform: scale(1.05); /* Add scale effect on hover */
-		}
+	.home-link:hover {
+    background-color: rgba(87, 87, 87, 0.8);
+    transform: scale(1.05);
+	}
 
-		.home-link span {
-        pointer-events: none; /* Ensure clicking anywhere triggers the link */
-		}
+	.home-link span {
+    pointer-events: none; /* Prevent interference from text span */
+	}
 
         .tm-nav, .tm-site-header, .tm-site-footer {
             display: none;
@@ -130,12 +131,14 @@
 </head>
 
 <body>
-<div id="overlay"></div>
-    <!-- Home Icon and Text -->
+	<div id="overlay"></div>
+    
+	<!-- Home Icon and Text -->
     <a href="index.html" class="home-link">
-    <img src="images/home.png" alt="HOME">
+    <img src="images/home.png" alt="Home Icon">
     <span>HOME</span>
 	</a>
+
 
     <div class="tm-container">
         <div>
