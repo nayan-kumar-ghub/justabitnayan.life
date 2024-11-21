@@ -21,29 +21,35 @@
         }
 		
 		.home-link {
-		position: absolute;
-		top: 15px;
-		left: 15px;
-		display: flex;
-		align-items: center;
-		font-family: 'Gugi', sans-serif;
-		background-color: rgba(51, 51, 51, 0.6);
-		padding: 10px 15px;
-		border-radius: 5px;
-		text-decoration: none;
-		color: white;
-		transition: background-color 0.3s, transform 0.2s;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Center items within the link */
+        font-family: 'Gugi', sans-serif;
+        background-color: rgba(51, 51, 51, 0.6);
+        padding: 10px 15px;
+        border-radius: 5px;
+        text-decoration: none;
+        color: white;
+        transition: background-color 0.3s, transform 0.2s;
+        width: auto; /* Ensure the anchor size adjusts to its content */
 		}
 
-		.home-link img {
-		width: 24px;
-		height: 24px;
-		margin-right: 8px;
+			.home-link img {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
 		}
 
 		.home-link:hover {
-		background-color: rgba(87, 87, 87, 0.8);
-		transform: scale(1.05); /* Ensure transform scales the element */
+        background-color: rgba(87, 87, 87, 0.8);
+        transform: scale(1.05); /* Add scale effect on hover */
+		}
+
+		.home-link span {
+        pointer-events: none; /* Ensure clicking anywhere triggers the link */
 		}
 
         .tm-nav, .tm-site-header, .tm-site-footer {
@@ -126,9 +132,10 @@
 <body>
     <!-- Home Icon and Text -->
     <a href="index.html" class="home-link">
-		<img src="images/home.png" alt="HOME">
-		<span>HOME</span>
+    <img src="images/home.png" alt="HOME">
+    <span>HOME</span>
 	</a>
+
 	<div id="overlay"></div>
     <div class="tm-container">
         <div>
