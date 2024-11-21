@@ -91,6 +91,10 @@
 	z-index: 3; /* Ensure it stays above other layers */
 	}
 	
+	.hidden {
+	display: none;
+	}
+
 	.know-me-text {
 		color: var(--text-color);
 		text-align: center;
@@ -286,8 +290,20 @@
   </div>
   <script>
     document.getElementById('clickIcon').addEventListener('click', function() {
-      document.getElementById('mainPage').classList.toggle('visible');
-    });
+	const mainPage = document.getElementById('mainPage');
+	const clickIconContainer = document.querySelector('.click-icon-container');
+
+  // Toggle visibility of the main page
+	mainPage.classList.toggle('visible');
+
+  // Hide the click icon and text when the main page is visible
+	if (mainPage.classList.contains('visible')) {
+    clickIconContainer.classList.add('hidden');
+	} else {
+    clickIconContainer.classList.remove('hidden');
+	}
+	});
+
 
     class TextScramble {
       constructor(el) {
