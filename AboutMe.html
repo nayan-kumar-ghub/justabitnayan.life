@@ -19,50 +19,52 @@
             background-attachment: fixed;
             background-position: center;
         }
-		
-			.home-link {
-			position: absolute;
-			top: 15px;
-			left: 15px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			font-family: 'Gugi', sans-serif;
-			background-color: rgba(51, 51, 51, 0.6);
-			padding: 10px 15px;
-			border-radius: 5px;
-			text-decoration: none;
-			color: white;
-			transition: background-color 0.3s, transform 0.2s;
-			width: auto;
-			}
 
-			.home-link img {
-			width: 24px;
-			height: 24px;
-			margin-right: 8px;
-			}
+        .home-link {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Gugi', sans-serif;
+            background-color: rgba(51, 51, 51, 0.6);
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            transition: background-color 0.3s, transform 0.2s;
+            width: auto;
+        }
 
-			.home-link:hover {
-			background-color: rgba(87, 87, 87, 0.8);
-			transform: scale(1.05); /* Add scale effect on hover */
-			color: white; /* Keep the color consistent on hover */
-			}
+        .home-link img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
 
-			.home-link span {
-			pointer-events: none; /* Ensure clicking anywhere triggers the link */
-			}
+        .home-link:hover {
+            background-color: rgba(87, 87, 87, 0.8);
+            transform: scale(1.05); /* Add scale effect on hover */
+            color: white; /* Keep the color consistent on hover */
+        }
 
-			.tm-nav, .tm-site-header, .tm-site-footer {
+        .home-link span {
+            pointer-events: none; /* Ensure clicking anywhere triggers the link */
+        }
+
+        .tm-nav,
+        .tm-site-header,
+        .tm-site-footer {
             display: none;
-			}
+        }
 
-			.tm-content-title {
+        .tm-content-title {
             font-family: 'Gugi', sans-serif;
             font-size: 3em;
             margin-top: 15%;
             text-align: center;
-			}
+        }
 
         #overlay {
             position: fixed;
@@ -75,11 +77,13 @@
             transition: opacity 2s ease-out;
             opacity: 1;
             visibility: visible;
+            pointer-events: all;
         }
 
         #overlay.hidden {
             opacity: 0;
             visibility: hidden;
+            pointer-events: none;
         }
 
         footer {
@@ -131,14 +135,13 @@
 </head>
 
 <body>
-	<div id="overlay"></div>
-    
-	<!-- Home Icon and Text -->
-    <a href="index.html" class="home-link">
-    <img src="images/home.png" alt="Home Icon">
-    <span>HOME</span>
-	</a>
+    <div id="overlay"></div>
 
+    <!-- Home Icon and Text -->
+    <a href="index.html" class="home-link">
+        <img src="images/home.png" alt="Home Icon">
+        <span>HOME</span>
+    </a>
 
     <div class="tm-container">
         <div>
@@ -213,10 +216,11 @@
                 const overlay = $('#overlay');
                 overlay.addClass('hidden');
                 setTimeout(() => {
-                    overlay.remove();
+                    overlay.css('pointer-events', 'none'); // Ensure it doesn't block clicks
                 }, 2000);
             });
         });
     </script>
 </body>
+
 </html>
