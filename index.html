@@ -83,9 +83,12 @@
 	
     .click-icon-container {
 	position: absolute;
-	top: 60%; /* Adjust as needed to position correctly */
+	top: 60%; /* Adjust as needed */
+	left: 50%;
+	transform: translateX(-50%);
 	text-align: center;
-	width: 100%;
+	width: auto;
+	z-index: 3; /* Ensure it stays above other layers */
 	}
 	
 	.know-me-text {
@@ -94,6 +97,7 @@
 		margin-top: 10px;
 		font-size: 1.2rem;
 	}
+	
     .main-page {
       position: fixed;
       top: 0;
@@ -219,9 +223,10 @@
   </style>
 </head>
 <body>
-<div class="container">
-  <div class="text-container" id="textContainer">
-    <div class="text"></div>
+  <div class="container">
+    <div class="text-container" id="textContainer">
+      <div class="text"></div>
+    </div>
   </div>
   <div class="click-icon-container">
     <div class="click-icon" id="clickIcon">
