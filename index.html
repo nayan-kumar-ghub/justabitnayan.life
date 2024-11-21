@@ -81,6 +81,12 @@
       transform: scale(1.2);
     }
     
+	.know-me-text {
+		color: var(--text-color);
+		text-align: center;
+		margin-top: 10px;
+		font-size: 1.2rem;
+	}
     .main-page {
       position: fixed;
       top: 0;
@@ -206,16 +212,18 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="text-container" id="textContainer">
-      <div class="text"></div>
-      <div class="click-icon" id="clickIcon">
-	<img src="/images/click.png" alt="Click to Load">
-	</div>
-	<div class="know-me-text" style="color: var(--text-color); text-align: center; margin-top: 10px; font-size: 1.2rem;">
-	Get to know me better.
-	</div>
+<div class="container">
+  <div class="text-container" id="textContainer">
+    <div class="text"></div>
+  </div>
+  <div class="click-icon-container">
+    <div class="click-icon" id="clickIcon">
+      <img src="/images/click.png" alt="Click to Load">
     </div>
+    <div class="know-me-text">
+      Get to know me better.
+    </div>
+  </div>
     <div class="main-page" id="mainPage">
       <div class="title">JUST A BIT</div>
       <div class="content">
