@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JustaBit-NayanKumar</title>
+  <title>JustaBit-NK</title>
   <style>
     @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100|Gugi:wght@400..900&display=swap');
 	
@@ -187,12 +187,21 @@
         font-size: 1.2rem;
       }
     }
+    
+    /* Hover effect for the new icon */
+    .click-icon img:hover {
+      transform: scale(1.1);
+      transition: transform 0.2s ease;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="text-container" id="textContainer">
       <div class="text"></div>
+      <div class="click-icon">
+        <img src="/images/click.png" alt="Click Icon" id="clickIcon" style="margin-top: 20px; cursor: pointer; width: 50px; height: 50px;">
+      </div>
     </div>
     <div class="main-page" id="mainPage">
       <div class="title">JUST A BIT</div>
@@ -247,6 +256,7 @@
       document.getElementById('mainPage').classList.toggle('visible');
     });
 
+    // Text scramble effect
     class TextScramble {
       constructor(el) {
         this.el = el;
@@ -271,60 +281,37 @@
         cancelAnimationFrame(this.frameRequest);
         this.frame = 0;
         this.update();
-        return promise.catch(error => console.error(error));
+        return promise;
       }
       update() {
         let output = '';
         let complete = 0;
         for (let i = 0, n = this.queue.length; i < n; i++) {
-          let { from, to, start, end, char } = this.queue[i];
+          const { from, to, start, end } = this.queue[i];
+          const char = this.frames(start, end);
+          output += char;
           if (this.frame >= end) {
             complete++;
-            output += to;
-          } else if (this.frame >= start) {
-            if (!char || Math.random() < 0.28) {
-              char = this.randomChar();
-              this.queue[i].char = char;
-            }
-            output += `<span class="dud">${char}</span>`;
-          } else {
-            output += from;
           }
         }
-        this.el.innerHTML = output;
+        this.el.innerText = output;
         if (complete === this.queue.length) {
           this.resolve();
         } else {
           this.frameRequest = requestAnimationFrame(this.update);
-          this.frame++;
         }
+        this.frame++;
       }
-      randomChar() {
-        return this.chars[Math.floor(Math.random() * this.chars.length)];
+      frames(start, end) {
+        const frame = Math.min(this.frame, end);
+        const progress = Math.max(0, (frame - start) / (end - start));
+        const index = Math.floor(progress * this.chars.length);
+        return this.chars[index];
       }
     }
-
-    const phrases = [
-      'Nayan Kumar',
-      'Tech Enthusiast',
-      'DevOps Engineer',
-      'Hiker',
-      'nayan.kumar.ys@outlook.com',
-      '+91-9743771209'
-    ];
-
     const el = document.querySelector('.text');
     const fx = new TextScramble(el);
-
-    let counter = 0;
-    const next = () => {
-      fx.setText(phrases[counter]).then(() => {
-        setTimeout(next, 800);
-      });
-      counter = (counter + 1) % phrases.length;
-    };
-
-    next();
+    fx.setText('Just a Bit - Nayan Kumar');
   </script>
 </body>
 </html>
