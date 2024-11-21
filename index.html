@@ -6,7 +6,7 @@
   <title>JustaBit-NK</title>
   <style>
     @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100|Gugi:wght@400..900&display=swap');
-    
+	
     :root {
       --bg-color: #212121;
       --text-color: #fafafa;
@@ -15,70 +15,203 @@
       --title-font-size: 4em;
       --title-shadow-color: rgba(0, 0, 0, 0.7);
       --icon-size: 60px;
+      --social-icon-size: 40px;
       --icon-margin: 25px;
+      --social-margin-bottom: 5%;
       --content-bg-color: rgba(255, 255, 255, 0.3);
+      --link-text-font-size: 20px;
+      --content-height: auto;
     }
-
+    
     html, body {
       font-family: 'Roboto Mono', monospace;
       background: var(--bg-color);
       height: 100%;
       margin: 0;
+      overflow: hidden;
       display: flex;
       justify-content: center;
       align-items: center;
     }
-
+    
     .container {
+      position: relative;
+      width: 100%;
+      height: 100%;
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
+      flex-direction: column;
+    }
+    
+    .text-container {
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100%;
       text-align: center;
     }
-
+    
     .text {
+      font-weight: 100;
       font-size: 2rem;
       color: var(--text-color);
+      text-align: center;
+    }
+    
+    .dud {
+      color: var(--dud-color);
     }
 
     .click-icon {
-      margin-top: 20px;
+      position: absolute;
+      top: 70%;
       cursor: pointer;
+      transition: transform 0.3s ease;
     }
-
+    
     .click-icon img {
-      width: 50px;
-      height: 50px;
-      transition: transform 0.2s;
+      width: var(--icon-size);
+      height: var(--icon-size);
     }
 
-    .click-icon img:hover {
-      transform: scale(1.1);
+    .click-icon:hover {
+      transform: scale(1.2);
     }
-
+    
     .main-page {
-      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      background: url('/images/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      pointer-events: none;
+      z-index: 2;
+    }
+    
+    .main-page.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    
+    .title {
+      margin-top: var(--title-margin-top);
+      font-size: var(--title-font-size);
+      text-align: center;
+      color: white;
+      text-shadow: 2px 2px 4px var(--title-shadow-color);
+      font-family: 'Gugi', sans-serif;
+      padding: 10px;
+      letter-spacing: 4px;
+    }
+    
+    .main-page .content {
+      text-align: center;
+      background-color: var(--content-bg-color);
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 700px;
+      font-size: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .icons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+      gap: 15px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    
+    .icons a {
+      text-decoration: none;
+      color: white;
+      text-align: center;
+      display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 20px;
+      transition: transform 0.2s;
     }
-
-    .main-page.visible {
+    
+    .icons a:hover {
+      transform: scale(1.1);
+    }
+    
+    .icons a img {
+      width: var(--icon-size);
+      height: var(--icon-size);
+      margin-bottom: 10px;
+    }
+    
+    .icons a p {
+      font-size: var(--link-text-font-size);
+      margin: 0;
+    }
+    
+    .social {
+      margin-bottom: var(--social-margin-bottom);
       display: flex;
+      justify-content: center;
+      gap: 15px;
     }
-
-    .title {
-      font-size: var(--title-font-size);
-      color: var(--text-color);
-      text-shadow: 2px 2px 4px var(--title-shadow-color);
+    
+    .social a img {
+      width: var(--social-icon-size);
+      height: var(--social-icon-size);
+    }
+    
+    @media (max-width: 768px) {
+      .title {
+        font-size: 2.5rem;
+      }
+      .icons a img {
+        width: 50px;
+        height: 50px;
+      }
+      .text {
+        font-size: 1.5rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .title {
+        font-size: 2rem;
+        margin-top: 5%;
+      }
+      .icons {
+        grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+        gap: 10px;
+      }
+      .icons a img {
+        width: 40px;
+        height: 40px;
+      }
+      .text {
+        font-size: 1.2rem;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="text" id="textScramble"></div>
-    <div class="click-icon">
-      <img src="/images/click.png" alt="Click Icon" id="clickIcon">
+    <div class="text-container" id="textContainer">
+      <div class="text"></div>
+      <div class="click-icon" id="clickIcon">
+        <img src="/images/click.png" alt="Click to Load">
+      </div>
     </div>
     <div class="main-page" id="mainPage">
       <div class="title">JUST A BIT</div>
@@ -129,25 +262,24 @@
     </div>
   </div>
   <script>
+    document.getElementById('clickIcon').addEventListener('click', function() {
+      document.getElementById('mainPage').classList.toggle('visible');
+    });
 
-  <script>
-    // TextScramble class
     class TextScramble {
       constructor(el) {
         this.el = el;
         this.chars = '!<>-_\\/[]{}—=+*^?#________';
-        this.queue = [];
-        this.frame = 0;
-        this.frameRequest = null;
-        this.resolve = null;
         this.update = this.update.bind(this);
       }
-
       setText(newText) {
         const oldText = this.el.innerText;
         const length = Math.max(oldText.length, newText.length);
+        const promise = new Promise((resolve, reject) => {
+          this.resolve = resolve;
+          this.reject = reject;
+        });
         this.queue = [];
-
         for (let i = 0; i < length; i++) {
           const from = oldText[i] || '';
           const to = newText[i] || '';
@@ -155,21 +287,16 @@
           const end = start + Math.floor(Math.random() * 40);
           this.queue.push({ from, to, start, end });
         }
-
         cancelAnimationFrame(this.frameRequest);
         this.frame = 0;
         this.update();
-
-        return new Promise(resolve => (this.resolve = resolve));
+        return promise.catch(error => console.error(error));
       }
-
       update() {
         let output = '';
         let complete = 0;
-
         for (let i = 0, n = this.queue.length; i < n; i++) {
           let { from, to, start, end, char } = this.queue[i];
-
           if (this.frame >= end) {
             complete++;
             output += to;
@@ -183,9 +310,7 @@
             output += from;
           }
         }
-
         this.el.innerHTML = output;
-
         if (complete === this.queue.length) {
           this.resolve();
         } else {
@@ -193,37 +318,32 @@
           this.frame++;
         }
       }
-
       randomChar() {
         return this.chars[Math.floor(Math.random() * this.chars.length)];
       }
     }
 
-    // Initialize TextScramble
-    const phrases = ['Nayan Kumar',
-					'Tech Enthusiast',
-					'DevOps Engineer',
-					'Hiker',
-					'nayan.kumar.ys@outlook.com',
-					'+91-9743771209'];
-    const el = document.getElementById('textScramble');
+    const phrases = [
+      'Nayan Kumar',
+      'Tech Enthusiast',
+      'DevOps Engineer',
+      'Hiker',
+      'nayan.kumar.ys@outlook.com',
+      '+91-9743771209'
+    ];
+
+    const el = document.querySelector('.text');
     const fx = new TextScramble(el);
 
     let counter = 0;
     const next = () => {
       fx.setText(phrases[counter]).then(() => {
-        setTimeout(next, 2000);
+        setTimeout(next, 800);
       });
       counter = (counter + 1) % phrases.length;
     };
 
     next();
-
-    // Toggle visibility of the main page on click
-    document.getElementById('clickIcon').addEventListener('click', () => {
-      const mainPage = document.getElementById('mainPage');
-      mainPage.classList.toggle('visible');
-    });
   </script>
 </body>
 </html>
